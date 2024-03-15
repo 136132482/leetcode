@@ -70,22 +70,31 @@ class  DynamicArray:
              sub_size = new_sub_list[:size]
              surplus = new_sub_list[size + 1:]
          # 收缩范围
-         for i in range(len(sub_size)):
-             # 判断对应数量
-             res = self.find_all_indices(sub_size, sub_size[i])
-             other_res = self.find_all_indices(surplus, sub_size[i])
-             if len(res) != len(other_res):
-                 continue
-             else:
-                 # 对称回文串
-                 surplus_list = []
-                 for i in range(len(surplus)):
-                     ss = surplus[len(surplus) - i - 1]
-                     surplus_list.append(ss)
-                 otehr_str = "".join(surplus_list)
-                 sub_str = "".join(sub_size)
-                 if sub_str == otehr_str:
-                     return str
+         surplus_list = []
+         for i in range(len(surplus)):
+             ss = surplus[len(surplus) - i - 1]
+             surplus_list.append(ss)
+         otehr_str = "".join(surplus_list)
+         sub_str = "".join(sub_size)
+         if sub_str == otehr_str:
+             return str
+
+         # for i in range(len(sub_size)):
+         #     # 判断对应数量
+         #     res = self.find_all_indices(sub_size, sub_size[i])
+         #     other_res = self.find_all_indices(surplus, sub_size[i])
+         #     if len(res) != len(other_res):
+         #         continue
+         #     else:
+         #         # 对称回文串
+         #         surplus_list = []
+         #         for i in range(len(surplus)):
+         #             ss = surplus[len(surplus) - i - 1]
+         #             surplus_list.append(ss)
+         #         otehr_str = "".join(surplus_list)
+         #         sub_str = "".join(sub_size)
+         #         if sub_str == otehr_str:
+         #             return str
          return None
 
 
@@ -136,5 +145,5 @@ class  DynamicArray:
                         tmp=str
 
 if __name__=='__main__':
-    res=DynamicArray().dynamic_portfolio_list("civilwartestingwhetherthatnaptionoranynartionsoconceivedandsodedicatedcanlongendureWeareqmetonagreatbattlefiemldoftzhatwarWehavecometodedicpateaportionofthatfieldasafinalrestingplaceforthosewhoheregavetheirlivesthatthatnationmightliveItisaltogetherfangandproperthatweshoulddothisButinalargersensewecannotdedicatewecannotconsecratewecannothallowthisgroundThebravelmenlivinganddeadwhostruggledherehaveconsecrateditfaraboveourpoorponwertoaddordetractTgheworldadswfilllittlenotlenorlongrememberwhatwesayherebutitcanneverforgetwhattheydidhereItisforusthelivingrathertobededicatedheretotheulnfinishedworkwhichtheywhofoughtherehavethusfarsonoblyadvancedItisratherforustobeherededicatedtothegreattdafskremainingbeforeusthatfromthesehonoreddeadwetakeincreaseddevotiontothatcauseforwhichtheygavethelastpfullmeasureofdevotionthatweherehighlyresolvethatthesedeadshallnothavediedinvainthatthisnationunsderGodshallhaveanewbirthoffreedomandthatgovernmentofthepeoplebythepeopleforthepeopleshallnotperishfromtheearth")
+    res=DynamicArray().dynamic_portfolio_list("qkajbumzdzkiplmbcpnhbzweoevrvbptpozhtrfntszvnwbdahvkykmezrwruhvvslngruvwqebudtfxgpbmwefczwrecpqjegxkqknpobzkemmtruidulnxgntjxcmxtwmlxhzmbqfqylwvzjyojhfawwuupiipvxjiyxkqvsxbhgzzegfkdihizvjoxzrmeorikzsdyphbujaqmykrfblneqmwwxsoonzsgvligqxrrumspylfvquklbanjhkudlprwoycpxdsueokruoofyubirbhbyfuvgllijywuqmkcsfjttbnmelrylivkefllepgxnoeummujbaoyvryukyoumvuxezegpwgmwsupjuaarvbtbfmisrifjadqjypmzipvjysgakvjhfeaqwpsqijvqibshctuabwqqsjwotjopahoaptmxkwerkjkmwiodgblhtnhykzjuaoluoyokroxuvqtkpggfanzabgjejdfsgybhxbscubdpufywbxgutheskuhixasnksoayjngvhfoxxclykfobrwxjwgefarzczvptlfrgrtrjcemaeihpukhbeoezgvrwxgyhpkkfvmfvquwtswkdwqqgrgasopladdnteulqofmjhewpghkibbrewnhdllfppctgkfkoedoiwqocnpvfviochrokrgrzthrvyhqfsrzyyvqwkhuzsrkfaympcdodkwaojnghzytkhf")
     print(res)
