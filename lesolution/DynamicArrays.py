@@ -1,5 +1,5 @@
 
-#动态组合查询子串  从大往小
+#动态组合查询子串  从大往小  双指针
 class  DynamicArray:
      #查询组合
      def  longestPalindrome(self,s):
